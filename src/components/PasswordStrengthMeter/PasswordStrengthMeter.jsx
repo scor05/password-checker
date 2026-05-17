@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import './PasswordStrengthMeter.css'
 import evalPassword from './evalPassword.jsx'
 
 const PasswordStrengthMeter = () => {
     const [password, setPassword] = useState('')
     const strength = evalPassword(password)
+    const strengthClass = strength.replaceAll(' ', '-')
 
     useEffect(() => {
         evalPassword(password)
@@ -19,7 +21,7 @@ const PasswordStrengthMeter = () => {
             value={password}
             onChange={(e) => { setPassword(e.target.value) }}
         />
-        <p className={`password-meter-label password-${strength}`}>Fortaleza de Contraseña: {strength}</p>
+        <p className={`password-meter-label password-${strengthClass}`}>Fortaleza de Contraseña: {strength}</p>
 
     </div>)
 }
