@@ -1,0 +1,21 @@
+# Workflow para correr los tests en cada push
+
+name: VerifyPushTests
+
+on: [push, workflow_dispatch]
+
+jobs:
+    verify-tests:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout
+            uses: actions/checkout@v4
+
+          - name: Bun setup
+            uses: oven-sh/setup-bun@v2
+
+          - name: Install deps
+            run: bun install
+
+          - name: Run tests
+            run: bun run test:run
