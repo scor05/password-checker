@@ -1,18 +1,5 @@
-# React + Vite
+# Password Strength Checker
+Este es un proyecto bastante simple que funciona como un calificador de "fuerza" para contraseñas, principalmente hecho solo para familiarizarme con testing en vitest con react testing library.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Especificaciones
+Para instalar el proyecto, es solo necesario ejecutar `bun install`, y ya con eso se descargarán todas las dependencias utilizadas. Luego, para correr los tests, el proyecto ya está configurado para que `bun run test` ejecute todos los tests correspondientes. Y por último, para ver el proyecto en modo de desarrollo solo se debe de correr `bun run dev`, y eso expondrá el puerto local 5173 para ver el proyecto en el browser.
